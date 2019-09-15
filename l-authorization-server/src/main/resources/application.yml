@@ -1,0 +1,26 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8001/eureka/
+server:
+  port: 8990
+
+spring:
+  application:
+    name: authentication-server
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/chars?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
+    username: root
+    password: root
+#    schema: sql/schema.sql
+
+  security:
+    oauth2:
+      jwt:
+        signingKey: 123456
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+
